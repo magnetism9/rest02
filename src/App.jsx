@@ -9,7 +9,7 @@ import Contact from './pages/Contact'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/rest02">
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1">
