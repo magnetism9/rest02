@@ -25,9 +25,9 @@ const services = [
     icon: 'visibility',
     title: '소방감리',
     subtitle: 'Fire Supervision',
-    accent: '#F97316',
-    bg: 'rgba(249,115,22,0.08)',
-    border: 'rgba(249,115,22,0.2)',
+    accent: '#991b1b',
+    bg: 'rgba(153,27,27,0.08)',
+    border: 'rgba(153,27,27,0.2)',
     desc: '신축·증개축 건축물의 소방공사가 설계도면과 법령 기준에 따라 적정하게 시공되는지 감리합니다.',
     items: ['소방공사 감리업무 수행', '시공 단계별 검사 및 확인', '소방시설 완공 전 점검', '준공검사 지원', '하자보수 관리', '관계기관 협의 대행'],
   },
@@ -119,7 +119,7 @@ export default function Services() {
                 <div style={{ fontSize: '3rem', fontWeight: 800, color: 'var(--border)', letterSpacing: '-0.04em', fontFamily: 'Inter, sans-serif', lineHeight: 1, marginBottom: 12 }}>{p.step}</div>
                 <div style={{
                   width: 48, height: 48, borderRadius: 14,
-                  background: 'rgba(249,115,22,0.1)', border: '1px solid rgba(249,115,22,0.2)',
+                  background: 'rgba(153,27,27,0.1)', border: '1px solid rgba(153,27,27,0.2)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   margin: '0 auto 16px',
                 }}>

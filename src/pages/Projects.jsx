@@ -61,8 +61,8 @@ export default function Projects() {
                     </div>
                     <span style={{
                       display: 'inline-block',
-                      background: 'rgba(249,115,22,0.1)', color: 'var(--brand-fire)',
-                      border: '1px solid rgba(249,115,22,0.2)',
+                      background: 'rgba(153,27,27,0.1)', color: 'var(--brand-fire)',
+                      border: '1px solid rgba(153,27,27,0.2)',
                       fontSize: '0.75rem', fontWeight: 600, padding: '3px 10px', borderRadius: 'var(--radius-full)',
                     }}>{project.type}</span>
                   </div>

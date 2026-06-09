@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const values = [
   { icon: 'workspace_premium', title: '전문성', desc: '소방설비기사 자격 보유 전문가가 직접 설계 및 감리를 수행합니다.', accent: '#2452c4' },
   { icon: 'gps_fixed',         title: '정확성', desc: '소방 관련 법령과 기준을 철저히 준수한 설계로 인허가를 지원합니다.', accent: '#059669' },
-  { icon: 'verified_user',     title: '신뢰성', desc: '고객과의 약속을 지키는 책임감 있는 서비스를 제공합니다.', accent: '#F97316' },
+  { icon: 'verified_user',     title: '신뢰성', desc: '고객과의 약속을 지키는 책임감 있는 서비스를 제공합니다.', accent: '#991b1b' },
 ]
 
 const history = [

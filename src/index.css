@@ -5,8 +5,8 @@
   --color-navy: #0D1F3F;
   --color-royal-blue: #1B4FD8;
   --color-royal-blue-light: #2452c4;
-  --color-fire: #F97316;
-  --color-fire-light: #FB923C;
+  --color-fire: #991b1b;
+  --color-fire-light: #b91c1c;
 }
 
 /* ── CSS Custom Properties ── */
@@ -15,8 +15,8 @@
   --brand-navy: #0D1F3F;
   --brand-blue: #1B4FD8;
   --brand-blue-light: #2452c4;
-  --brand-fire: #F97316;
-  --brand-fire-light: #FB923C;
+  --brand-fire: #991b1b;
+  --brand-fire-light: #b91c1c;
 
   /* Dark mode (default) */
   --bg-1: #0A1628;
@@ -28,7 +28,7 @@
   --text-2: #94A3B8;
   --text-3: #64748B;
   --border: rgba(255,255,255,0.08);
-  --border-active: rgba(249,115,22,0.45);
+  --border-active: rgba(153,27,27,0.45);
   --nav-bg: rgba(10,22,40,0.96);
   --nav-border: rgba(255,255,255,0.06);
   --input-bg: rgba(255,255,255,0.05);
@@ -36,9 +36,9 @@
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
   --shadow-md: 0 4px 24px rgba(0,0,0,0.4);
   --shadow-lg: 0 8px 40px rgba(0,0,0,0.5);
-  --shadow-fire: 0 4px 20px rgba(249,115,22,0.25);
+  --shadow-fire: 0 4px 20px rgba(153,27,27,0.25);
   --gradient-hero: linear-gradient(135deg, #0A1628 0%, #0D1F3F 55%, #1B4FD8 100%);
-  --gradient-fire: linear-gradient(135deg, #1B4FD8 0%, #F97316 100%);
+  --gradient-fire: linear-gradient(135deg, #1B4FD8 0%, #991b1b 100%);
   --radius: 14px;
   --radius-sm: 8px;
   --radius-lg: 20px;
@@ -58,7 +58,7 @@
   --text-2: #374151;
   --text-3: #6B7280;
   --border: rgba(0,0,0,0.08);
-  --border-active: rgba(249,115,22,0.4);
+  --border-active: rgba(153,27,27,0.4);
   --nav-bg: rgba(248,250,255,0.97);
   --nav-border: rgba(0,0,0,0.07);
   --input-bg: #ffffff;
@@ -170,7 +170,7 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 8px;
   padding: 13px 28px;
-  background: linear-gradient(135deg, #1B4FD8 0%, #F97316 100%);
+  background: linear-gradient(135deg, #1B4FD8 0%, #991b1b 100%);
   color: #fff;
   font-weight: 700;
   font-size: 0.9rem;
@@ -184,7 +184,7 @@ img { max-width: 100%; display: block; }
 }
 .btn-fire:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(249,115,22,0.35);
+  box-shadow: 0 8px 30px rgba(153,27,27,0.35);
   opacity: 0.92;
 }
 
@@ -217,8 +217,8 @@ img { max-width: 100%; display: block; }
   gap: 6px;
   padding: 5px 14px;
   border-radius: var(--radius-full);
-  background: rgba(249,115,22,0.12);
-  border: 1px solid rgba(249,115,22,0.25);
+  background: rgba(153,27,27,0.12);
+  border: 1px solid rgba(153,27,27,0.25);
   color: var(--brand-fire);
   font-size: 0.78rem;
   font-weight: 600;
@@ -291,7 +291,7 @@ img { max-width: 100%; display: block; }
 .t-input::placeholder { color: var(--text-3); }
 .t-input:focus {
   border-color: var(--brand-fire);
-  box-shadow: 0 0 0 3px rgba(249,115,22,0.12);
+  box-shadow: 0 0 0 3px rgba(153,27,27,0.12);
 }
 
 /* ── Responsive ── */

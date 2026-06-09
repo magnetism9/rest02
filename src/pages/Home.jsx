@@ -19,8 +19,8 @@ const services = [
     icon: 'visibility',
     title: '소방감리',
     desc: '신축·증개축 현장의 소방공사 적정 시공 여부 감리 및 준공 지원',
-    accent: '#F97316',
-    bg: 'rgba(249,115,22,0.1)',
+    accent: '#991b1b',
+    bg: 'rgba(153,27,27,0.1)',
   },
 ]
 
@@ -196,8 +196,8 @@ export default function Home() {
                 }}>
                   <div style={{
                     width: 44, height: 44, borderRadius: 12, flexShrink: 0,
-                    background: 'rgba(249,115,22,0.1)',
-                    border: '1px solid rgba(249,115,22,0.2)',
+                    background: 'rgba(153,27,27,0.1)',
+                    border: '1px solid rgba(153,27,27,0.2)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                   }}>
                     <span className="material-symbols-outlined" style={{ fontSize: 22, color: 'var(--brand-fire)' }}>{item.icon}</span>
@@ -215,7 +215,7 @@ export default function Home() {
 
       {/* ── CTA ── */}
       <section style={{ padding: '72px 0', background: 'var(--brand-dark)', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(27,79,216,0.15) 0%, rgba(249,115,22,0.1) 100%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(27,79,216,0.15) 0%, rgba(153,27,27,0.1) 100%)', pointerEvents: 'none' }} />
         <div className="container" style={{ position: 'relative', textAlign: 'center' }}>
           <span className="material-symbols-outlined" style={{ fontSize: 44, color: 'var(--brand-fire)', marginBottom: 16, display: 'block', fontVariationSettings: "'FILL' 1, 'wght' 200, 'GRAD' 0, 'opsz' 48" }}>local_fire_department</span>
           <h2 style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 800, color: '#fff', letterSpacing: '-0.02em', marginBottom: 14 }}>소방 설계 문의</h2>

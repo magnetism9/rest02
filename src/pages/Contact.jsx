@@ -49,7 +49,7 @@ export default function Contact() {
                 }}>
                   <div style={{
                     width: 38, height: 38, borderRadius: 10, flexShrink: 0,
-                    background: 'rgba(249,115,22,0.1)', border: '1px solid rgba(249,115,22,0.2)',
+                    background: 'rgba(153,27,27,0.1)', border: '1px solid rgba(153,27,27,0.2)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                   }}>
                     <span className="material-symbols-outlined" style={{ fontSize: 18, color: 'var(--brand-fire)' }}>{icon}</span>
@@ -64,7 +64,7 @@ export default function Contact() {
               {/* Hours */}
               <div style={{
                 padding: '18px 20px',
-                background: 'rgba(249,115,22,0.06)', border: '1px solid rgba(249,115,22,0.15)',
+                background: 'rgba(153,27,27,0.06)', border: '1px solid rgba(153,27,27,0.15)',
                 borderRadius: 'var(--radius)', marginTop: 4,
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
