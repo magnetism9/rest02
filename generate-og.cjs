@@ -119,11 +119,11 @@ function buildSVG(p) {
   <text x="152" y="128"
         font-family="Arial, Helvetica, sans-serif"
         font-size="20" font-weight="700" letter-spacing="0.5"
-        fill="white" opacity="0.9">구자성 소방설계사무소</text>
+        fill="white" opacity="0.9">플레임가드 엔지니어링</text>
   <text x="152" y="147"
         font-family="Arial, Helvetica, sans-serif"
         font-size="11" font-weight="400" letter-spacing="2"
-        fill="white" opacity="0.4">FIRE SAFETY DESIGN</text>
+        fill="white" opacity="0.4">FLAMEGUARD ENGINEERING</text>
 
   <!-- 메인 타이틀 -->
   <text x="80" y="256"

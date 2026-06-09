@@ -59,8 +59,8 @@ export default function Navbar() {
             <span className="material-symbols-outlined" style={{ fontSize: 20, color: '#fff', fontVariationSettings: "'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24" }}>local_fire_department</span>
           </div>
           <div style={{ lineHeight: 1.3 }}>
-            <div style={{ color: 'var(--text-1)', fontWeight: 700, fontSize: '0.92rem', letterSpacing: '-0.01em' }}>구자성 소방설계사무소</div>
-            <div style={{ color: 'var(--text-3)', fontSize: '0.65rem', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Fire Safety Design</div>
+            <div style={{ color: 'var(--text-1)', fontWeight: 700, fontSize: '0.92rem', letterSpacing: '-0.01em' }}>플레임가드 엔지니어링</div>
+            <div style={{ color: 'var(--text-3)', fontSize: '0.65rem', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Flameguard Engineering</div>
           </div>
         </Link>
 

@@ -168,7 +168,7 @@ export default function Home() {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
             <div>
-              <span className="sec-label">왜 구자성 소방설계사무소인가</span>
+              <span className="sec-label">왜 플레임가드 엔지니어링인가</span>
               <h2 style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 800, color: 'var(--text-1)', letterSpacing: '-0.02em', lineHeight: 1.25, marginBottom: 20 }}>
                 안전을 가장 먼저<br />생각하는 전문가
               </h2>

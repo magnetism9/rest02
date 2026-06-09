@@ -7,7 +7,7 @@ const values = [
 ]
 
 const history = [
-  { year: '2026.05', event: '구자성 소방설계사무소 개업' },
+  { year: '2026.05', event: '플레임가드 엔지니어링 개업' },
   { year: '2026.06', event: '사무소 홈페이지 오픈' },
 ]
 
@@ -42,7 +42,7 @@ export default function About() {
               </h2>
               <div className="divider-fire" />
               <p style={{ color: 'var(--text-2)', lineHeight: 1.9, marginBottom: 14, fontSize: '0.95rem' }}>
-                구자성 소방설계사무소는 2026년 5월 개업한 소방설비 설계 전문 회사입니다.
+                플레임가드 엔지니어링는 2026년 5월 개업한 소방설비 설계 전문 회사입니다.
                 소방설비 설계, 도면 작성, 소방감리까지 소방 분야 전반에 걸친 전문 서비스를 제공합니다.
               </p>
               <p style={{ color: 'var(--text-2)', lineHeight: 1.9, fontSize: '0.95rem' }}>
@@ -73,7 +73,7 @@ export default function About() {
               </div>
               <dl style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                 {[
-                  { dt: '상호명', dd: '구자성 소방설계사무소', icon: 'business' },
+                  { dt: '상호명', dd: '플레임가드 엔지니어링', icon: 'business' },
                   { dt: '대표자', dd: '구자성', icon: 'person' },
                   { dt: '개업일', dd: '2026년 5월 23일', icon: 'today' },
                   { dt: '업종',   dd: '소방설비 설계 · 도면 · 감리', icon: 'category' },

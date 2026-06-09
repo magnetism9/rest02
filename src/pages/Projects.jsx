@@ -17,7 +17,7 @@ export default function Projects() {
             시공실적
           </span>
           <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: 'var(--text-1)', letterSpacing: '-0.03em', lineHeight: 1.15, marginBottom: 16 }}>
-            구자성 소방설계사무소의<br />
+            플레임가드 엔지니어링의<br />
             <span style={{ background: 'var(--gradient-fire)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>주요 설계 실적</span>
           </h1>
           <p style={{ color: 'var(--text-2)', fontSize: '1rem' }}>신뢰할 수 있는 소방설비 설계 및 감리 사례</p>

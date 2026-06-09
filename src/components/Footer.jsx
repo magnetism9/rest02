@@ -17,8 +17,8 @@ export default function Footer() {
                 <span className="material-symbols-outlined" style={{ fontSize: 20, color: '#fff', fontVariationSettings: "'FILL' 1, 'wght' 300" }}>local_fire_department</span>
               </div>
               <div>
-                <div style={{ color: '#F0F4FF', fontWeight: 700, fontSize: '0.92rem' }}>구자성 소방설계사무소</div>
-                <div style={{ color: '#64748B', fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Fire Safety Design</div>
+                <div style={{ color: '#F0F4FF', fontWeight: 700, fontSize: '0.92rem' }}>플레임가드 엔지니어링</div>
+                <div style={{ color: '#64748B', fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Flameguard Engineering</div>
               </div>
             </div>
             <p style={{ color: '#64748B', fontSize: '0.87rem', lineHeight: 1.8, maxWidth: 260 }}>
@@ -72,7 +72,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.07)', paddingTop: 24, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
-          <p style={{ color: '#475569', fontSize: '0.8rem' }}>© 2026 구자성 소방설계사무소. All rights reserved.</p>
+          <p style={{ color: '#475569', fontSize: '0.8rem' }}>© 2026 플레임가드 엔지니어링. All rights reserved.</p>
           <p style={{ color: '#475569', fontSize: '0.8rem' }}>소방설비 설계 · 도면 설계 · 소방감리</p>
         </div>
       </div>
