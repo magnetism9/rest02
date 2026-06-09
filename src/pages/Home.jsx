@@ -1,128 +1,161 @@
 import { Link } from 'react-router-dom'
-import { ShieldCheck, FileText, Eye, ChevronRight, Award, Clock, Users } from 'lucide-react'
 
 const services = [
   {
-    icon: ShieldCheck,
+    icon: 'shield',
     title: '소방설비 설계',
     desc: '스프링클러, 옥내소화전, 자동화재탐지설비 등 각종 소방설비 설계',
-    color: 'text-[#2452c4]',
-    bg: 'bg-[#1a3a8f]/10',
+    accent: '#2452c4',
+    bg: 'rgba(27,79,216,0.1)',
   },
   {
-    icon: FileText,
+    icon: 'draft',
     title: '도면 설계',
     desc: '소방 관련 법령 기준에 적합한 정밀 소방도면 작성 및 인허가 대행',
-    color: 'text-[#166534]',
-    bg: 'bg-[#14532d]/10',
+    accent: '#059669',
+    bg: 'rgba(5,150,105,0.1)',
   },
   {
-    icon: Eye,
+    icon: 'visibility',
     title: '소방감리',
     desc: '신축·증개축 현장의 소방공사 적정 시공 여부 감리 및 준공 지원',
-    color: 'text-[#991b1b]',
-    bg: 'bg-[#7f1d1d]/10',
+    accent: '#F97316',
+    bg: 'rgba(249,115,22,0.1)',
   },
 ]
 
 const stats = [
-  { icon: Award, value: '전문 자격', label: '소방설비기사 보유' },
-  { icon: Clock, value: '2026.05', label: '사무소 개업' },
-  { icon: Users, value: '맞춤 설계', label: '고객 중심 서비스' },
+  { icon: 'workspace_premium', value: '전문 자격', label: '소방설비기사 보유' },
+  { icon: 'today',             value: '2026.05',   label: '사무소 개업' },
+  { icon: 'handshake',         value: '맞춤 설계',  label: '고객 중심 서비스' },
 ]
 
 export default function Home() {
   return (
     <div>
-      {/* Hero */}
-      <section className="relative min-h-screen flex items-center bg-gradient-to-br from-[#0D1B2A] via-[#1a2b4a] to-[#0D1B2A] overflow-hidden">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0"
-            style={{
-              backgroundImage: `radial-gradient(circle at 25% 25%, #2452c4 0%, transparent 50%),
-                                radial-gradient(circle at 75% 75%, #1a3a8f 0%, transparent 50%)`,
-            }}
-          />
-        </div>
+      {/* ── Hero ── */}
+      <section style={{
+        position: 'relative',
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        background: 'var(--gradient-hero)',
+        overflow: 'hidden',
+        paddingTop: 'var(--nav-h)',
+      }}>
+        {/* Orbs */}
+        <div className="hero-orb" style={{ width: 560, height: 560, background: 'var(--brand-blue)', top: -120, right: -80, opacity: 0.1 }} />
+        <div className="hero-orb" style={{ width: 340, height: 340, background: 'var(--brand-fire)', bottom: -60, left: -60, opacity: 0.1, animationDelay: '3s' }} />
+        {/* Dot grid */}
+        <div style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: 'radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px)',
+          backgroundSize: '48px 48px',
+          pointerEvents: 'none',
+        }} />
 
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-24 pb-20">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-[#1a3a8f]/30 border border-[#2452c4]/30 rounded-full px-4 py-1.5 mb-6">
-              <div className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
-              <span className="text-[#94a3b8] text-sm">소방설비 설계 전문 사무소</span>
+        <div className="container" style={{ position: 'relative', zIndex: 1, padding: '80px 24px' }}>
+          <div style={{ maxWidth: 700 }}>
+            {/* Badge */}
+            <div className="badge-fire anim-up" style={{ marginBottom: 28 }}>
+              <span className="dot-pulse" />
+              소방설비 설계 전문 사무소
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            {/* Headline */}
+            <h1 className="anim-up delay-1" style={{
+              fontSize: 'clamp(2.2rem, 5.5vw, 4rem)',
+              fontWeight: 800,
+              color: 'var(--text-1)',
+              lineHeight: 1.12,
+              letterSpacing: '-0.03em',
+              marginBottom: 24,
+            }}>
               안전한 공간을 만드는<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2452c4] to-[#60a5fa]">
-                소방설비 설계
-              </span>{' '}
-              전문가
+              <span style={{
+                background: 'var(--gradient-fire)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}>소방설비 설계</span> 전문가
             </h1>
 
-            <p className="text-[#94a3b8] text-lg leading-relaxed mb-8 max-w-xl">
+            {/* Sub */}
+            <p className="anim-up delay-2" style={{
+              fontSize: 'clamp(1rem, 2vw, 1.15rem)',
+              color: 'var(--text-2)',
+              lineHeight: 1.85,
+              marginBottom: 40,
+              maxWidth: 480,
+            }}>
               소방설비 설계·도면·감리까지 원스톱 서비스로<br />
               법령 기준에 맞는 최적의 소방 솔루션을 제공합니다.
             </p>
 
-            <div className="flex flex-wrap gap-3">
-              <Link
-                to="/contact"
-                className="px-6 py-3 bg-[#1a3a8f] hover:bg-[#2452c4] text-white font-semibold rounded-lg transition-colors flex items-center gap-2"
-              >
-                무료 상담 문의 <ChevronRight size={18} />
+            {/* CTAs */}
+            <div className="anim-up delay-3" style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginBottom: 56 }}>
+              <Link to="/contact" className="btn-fire">
+                <span className="material-symbols-outlined" style={{ fontSize: 17 }}>chat</span>
+                무료 상담 문의
               </Link>
-              <Link
-                to="/services"
-                className="px-6 py-3 border border-white/20 hover:border-white/40 text-white font-semibold rounded-lg transition-colors"
-              >
+              <Link to="/services" className="btn-outline">
                 사업분야 보기
               </Link>
+            </div>
+
+            {/* Stats */}
+            <div className="anim-up delay-4" style={{
+              display: 'flex', alignItems: 'center', gap: 32, flexWrap: 'wrap',
+              paddingTop: 32, borderTop: '1px solid var(--border)',
+            }}>
+              {stats.map((s, i) => (
+                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                  <span className="material-symbols-outlined" style={{ fontSize: 22, color: 'var(--brand-fire)' }}>{s.icon}</span>
+                  <div>
+                    <div style={{ fontWeight: 800, fontSize: '1.1rem', color: 'var(--text-1)', letterSpacing: '-0.01em', fontFamily: 'Inter, sans-serif' }}>{s.value}</div>
+                    <div style={{ fontSize: '0.75rem', color: 'var(--text-3)' }}>{s.label}</div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="bg-[#1a2b4a] py-10">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-3 gap-4">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <stat.icon size={24} className="text-[#2452c4] mx-auto mb-2" />
-                <div className="text-white font-bold text-lg">{stat.value}</div>
-                <div className="text-[#94a3b8] text-xs">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#0D1B2A] mb-3">사업분야</h2>
-            <p className="text-[#64748b]">소방설비의 설계부터 감리까지 전 과정을 책임집니다</p>
+      {/* ── Services ── */}
+      <section className="section" style={{ background: 'var(--bg-2)' }}>
+        <div className="container">
+          <div style={{ marginBottom: 48 }}>
+            <span className="sec-label">사업분야</span>
+            <h2 style={{ fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', fontWeight: 800, color: 'var(--text-1)', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
+              소방설비의 설계부터<br />감리까지 책임집니다
+            </h2>
+            <div className="divider-fire" />
+            <p style={{ color: 'var(--text-2)', fontSize: '1rem', lineHeight: 1.7 }}>전 과정을 원스톱으로 제공하는 전문 서비스</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {services.map((svc) => (
-              <div
-                key={svc.title}
-                className="p-6 rounded-xl border border-[#e2e8f0] hover:border-[#2452c4]/30 hover:shadow-lg transition-all group"
-              >
-                <div className={`w-12 h-12 ${svc.bg} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                  <svc.icon size={24} className={svc.color} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
+            {services.map((svc, i) => (
+              <div key={i} className="card" style={{ padding: 28 }}>
+                <div style={{
+                  width: 52, height: 52,
+                  background: svc.bg,
+                  borderRadius: 14,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  marginBottom: 20,
+                  border: `1px solid ${svc.accent}25`,
+                }}>
+                  <span className="material-symbols-outlined" style={{ fontSize: 26, color: svc.accent, fontVariationSettings: "'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24" }}>{svc.icon}</span>
                 </div>
-                <h3 className="text-[#0D1B2A] font-bold text-lg mb-2">{svc.title}</h3>
-                <p className="text-[#64748b] text-sm leading-relaxed">{svc.desc}</p>
-                <Link
-                  to="/services"
-                  className="inline-flex items-center gap-1 text-[#2452c4] text-sm font-medium mt-4 hover:gap-2 transition-all"
-                >
-                  자세히 보기 <ChevronRight size={14} />
+                <h3 style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-1)', marginBottom: 10, letterSpacing: '-0.01em' }}>{svc.title}</h3>
+                <p style={{ color: 'var(--text-2)', fontSize: '0.88rem', lineHeight: 1.75 }}>{svc.desc}</p>
+                <Link to="/services" style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 4,
+                  color: svc.accent, fontSize: '0.82rem', fontWeight: 600, marginTop: 18,
+                  transition: 'gap var(--transition)',
+                }}>
+                  자세히 보기
+                  <span className="material-symbols-outlined" style={{ fontSize: 14 }}>arrow_forward</span>
                 </Link>
               </div>
             ))}
@@ -130,16 +163,66 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-gradient-to-r from-[#0D1B2A] to-[#1a2b4a]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-3">소방 설계 문의</h2>
-          <p className="text-[#94a3b8] mb-8">소방설비 관련 궁금한 사항은 언제든지 문의해주세요</p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-[#1a3a8f] hover:bg-[#2452c4] text-white font-semibold rounded-lg transition-colors"
-          >
-            문의하기 <ChevronRight size={18} />
+      {/* ── Why us ── */}
+      <section className="section">
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+            <div>
+              <span className="sec-label">왜 구자성 소방설계사무소인가</span>
+              <h2 style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 800, color: 'var(--text-1)', letterSpacing: '-0.02em', lineHeight: 1.25, marginBottom: 20 }}>
+                안전을 가장 먼저<br />생각하는 전문가
+              </h2>
+              <div className="divider-fire" />
+              <p style={{ color: 'var(--text-2)', lineHeight: 1.9, marginBottom: 16, fontSize: '0.95rem' }}>
+                소방설비기사 자격 보유 전문가가 직접 설계·감리를 수행합니다.
+                소방 관련 법령과 기준을 철저히 준수하여 인허가를 지원하고,
+                고객과의 신뢰를 최우선으로 합니다.
+              </p>
+              <Link to="/about" className="btn-outline" style={{ padding: '10px 22px', fontSize: '0.85rem' }}>
+                회사 소개 보기
+              </Link>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+              {[
+                { icon: 'workspace_premium', title: '전문 자격', desc: '소방설비기사 자격 보유 전문가가 직접 설계 및 감리를 수행합니다.' },
+                { icon: 'gps_fixed',         title: '정밀 설계', desc: '소방 법령 기준을 철저히 준수한 정확한 설계로 인허가를 지원합니다.' },
+                { icon: 'verified_user',     title: '신뢰 서비스', desc: '고객과의 약속을 지키는 책임감 있는 서비스를 제공합니다.' },
+              ].map((item, i) => (
+                <div key={i} style={{
+                  display: 'flex', gap: 16, alignItems: 'flex-start',
+                  padding: 20, borderRadius: 'var(--radius)',
+                  background: 'var(--bg-card)', border: '1px solid var(--border)',
+                  transition: 'all var(--transition)',
+                }}>
+                  <div style={{
+                    width: 44, height: 44, borderRadius: 12, flexShrink: 0,
+                    background: 'rgba(249,115,22,0.1)',
+                    border: '1px solid rgba(249,115,22,0.2)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  }}>
+                    <span className="material-symbols-outlined" style={{ fontSize: 22, color: 'var(--brand-fire)' }}>{item.icon}</span>
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: 700, color: 'var(--text-1)', marginBottom: 5, fontSize: '0.95rem' }}>{item.title}</div>
+                    <div style={{ color: 'var(--text-2)', fontSize: '0.84rem', lineHeight: 1.7 }}>{item.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <section style={{ padding: '72px 0', background: 'var(--brand-dark)', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(27,79,216,0.15) 0%, rgba(249,115,22,0.1) 100%)', pointerEvents: 'none' }} />
+        <div className="container" style={{ position: 'relative', textAlign: 'center' }}>
+          <span className="material-symbols-outlined" style={{ fontSize: 44, color: 'var(--brand-fire)', marginBottom: 16, display: 'block', fontVariationSettings: "'FILL' 1, 'wght' 200, 'GRAD' 0, 'opsz' 48" }}>local_fire_department</span>
+          <h2 style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 800, color: '#fff', letterSpacing: '-0.02em', marginBottom: 14 }}>소방 설계 문의</h2>
+          <p style={{ color: '#94A3B8', marginBottom: 32, fontSize: '1rem' }}>소방설비 관련 궁금한 사항은 언제든지 문의해 주세요</p>
+          <Link to="/contact" className="btn-fire">
+            <span className="material-symbols-outlined" style={{ fontSize: 17 }}>chat</span>
+            문의하기
           </Link>
         </div>
       </section>

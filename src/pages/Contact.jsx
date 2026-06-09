@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react'
 
 const contactInfo = [
-  { icon: Phone, label: '전화', value: '010-0000-0000' },
-  { icon: Mail, label: '이메일', value: 'wkjd05@gmail.com' },
-  { icon: MapPin, label: '주소', value: '주소 추가 예정' },
+  { icon: 'call',       label: '전화',   value: '010-0000-0000' },
+  { icon: 'mail',       label: '이메일', value: 'wkjd05@gmail.com' },
+  { icon: 'location_on', label: '주소',  value: '주소 추가 예정' },
 ]
 
 export default function Contact() {
@@ -13,130 +12,138 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // TODO: 실제 이메일 전송 연동
     setSubmitted(true)
   }
 
   return (
-    <div className="pt-16">
+    <div style={{ paddingTop: 'var(--nav-h)' }}>
+
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#0D1B2A] to-[#1a2b4a] py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">문의하기</h1>
-          <p className="text-[#94a3b8] text-lg max-w-xl mx-auto">
-            소방설비 관련 문의는 언제든지 연락 주세요
-          </p>
+      <section style={{ background: 'var(--gradient-hero)', padding: '72px 0 64px', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '48px 48px', pointerEvents: 'none' }} />
+        <div className="container" style={{ position: 'relative', textAlign: 'center' }}>
+          <span className="sec-label" style={{ justifyContent: 'center' }}>
+            <span className="material-symbols-outlined" style={{ fontSize: 13 }}>chat</span>
+            문의하기
+          </span>
+          <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: 'var(--text-1)', letterSpacing: '-0.03em', lineHeight: 1.15, marginBottom: 16 }}>
+            소방설비 문의는<br />
+            <span style={{ background: 'var(--gradient-fire)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>언제든지 환영합니다</span>
+          </h1>
+          <p style={{ color: 'var(--text-2)', fontSize: '1rem' }}>빠른 시일 내에 전문가가 직접 답변드립니다</p>
         </div>
       </section>
 
-      <section className="py-20 bg-[#f8fafc]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Contact info */}
-            <div className="space-y-4">
-              <h2 className="text-xl font-bold text-[#0D1B2A] mb-6">연락처 정보</h2>
-              {contactInfo.map(({ icon: Icon, label, value }) => (
-                <div key={label} className="flex items-start gap-4 bg-white rounded-xl p-4 border border-[#e2e8f0]">
-                  <div className="w-10 h-10 bg-[#1a3a8f]/10 rounded-lg flex items-center justify-center shrink-0">
-                    <Icon size={18} className="text-[#2452c4]" />
+      <section className="section" style={{ background: 'var(--bg-2)' }}>
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 28, alignItems: 'start' }}>
+
+            {/* Left: Info */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+              <h2 style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--text-1)', marginBottom: 8 }}>연락처 정보</h2>
+              {contactInfo.map(({ icon, label, value }) => (
+                <div key={label} style={{
+                  display: 'flex', alignItems: 'center', gap: 14,
+                  padding: '16px 18px', borderRadius: 'var(--radius)',
+                  background: 'var(--bg-card)', border: '1px solid var(--border)',
+                }}>
+                  <div style={{
+                    width: 38, height: 38, borderRadius: 10, flexShrink: 0,
+                    background: 'rgba(249,115,22,0.1)', border: '1px solid rgba(249,115,22,0.2)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  }}>
+                    <span className="material-symbols-outlined" style={{ fontSize: 18, color: 'var(--brand-fire)' }}>{icon}</span>
                   </div>
                   <div>
-                    <div className="text-[#94a3b8] text-xs mb-0.5">{label}</div>
-                    <div className="text-[#1e293b] font-medium text-sm">{value}</div>
+                    <div style={{ color: 'var(--text-3)', fontSize: '0.74rem', marginBottom: 2 }}>{label}</div>
+                    <div style={{ color: 'var(--text-1)', fontWeight: 600, fontSize: '0.88rem' }}>{value}</div>
                   </div>
                 </div>
               ))}
 
-              <div className="bg-[#1a3a8f]/10 border border-[#1a3a8f]/20 rounded-xl p-4 mt-6">
-                <h3 className="text-[#0D1B2A] font-semibold text-sm mb-2">운영 시간</h3>
-                <div className="space-y-1 text-sm text-[#64748b]">
-                  <div className="flex justify-between">
-                    <span>평일</span>
-                    <span>09:00 ~ 18:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>토요일</span>
-                    <span>09:00 ~ 13:00</span>
-                  </div>
-                  <div className="flex justify-between text-[#94a3b8]">
-                    <span>일요일/공휴일</span>
-                    <span>휴무</span>
-                  </div>
+              {/* Hours */}
+              <div style={{
+                padding: '18px 20px',
+                background: 'rgba(249,115,22,0.06)', border: '1px solid rgba(249,115,22,0.15)',
+                borderRadius: 'var(--radius)', marginTop: 4,
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
+                  <span className="material-symbols-outlined" style={{ fontSize: 16, color: 'var(--brand-fire)' }}>schedule</span>
+                  <span style={{ fontWeight: 700, fontSize: '0.88rem', color: 'var(--text-1)' }}>운영 시간</span>
                 </div>
+                {[
+                  { day: '평일', time: '09:00 ~ 18:00', active: true },
+                  { day: '토요일', time: '09:00 ~ 13:00', active: true },
+                  { day: '일/공휴일', time: '휴무', active: false },
+                ].map(({ day, time, active }) => (
+                  <div key={day} style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 7, fontSize: '0.84rem' }}>
+                    <span style={{ color: 'var(--text-2)' }}>{day}</span>
+                    <span style={{ color: active ? 'var(--text-1)' : 'var(--text-3)', fontWeight: active ? 500 : 400 }}>{time}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
-            {/* Form */}
-            <div className="lg:col-span-2 bg-white rounded-2xl border border-[#e2e8f0] p-8">
+            {/* Right: Form */}
+            <div style={{
+              background: 'var(--bg-card)', border: '1px solid var(--border)',
+              borderRadius: 'var(--radius-lg)', padding: 36,
+              boxShadow: 'var(--shadow-sm)',
+            }}>
               {submitted ? (
-                <div className="flex flex-col items-center justify-center h-full py-16 text-center">
-                  <div className="w-16 h-16 bg-[#14532d]/10 rounded-full flex items-center justify-center mb-4">
-                    <CheckCircle size={32} className="text-[#166534]" />
+                <div style={{ textAlign: 'center', padding: '48px 24px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
+                  <div style={{
+                    width: 72, height: 72, borderRadius: '50%',
+                    background: 'rgba(5,150,105,0.12)', border: '1px solid rgba(5,150,105,0.25)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  }}>
+                    <span className="material-symbols-outlined" style={{ fontSize: 36, color: '#059669', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
                   </div>
-                  <h3 className="text-[#0D1B2A] font-bold text-xl mb-2">문의가 접수되었습니다</h3>
-                  <p className="text-[#64748b] text-sm">
-                    빠른 시일 내에 연락드리겠습니다.<br />감사합니다.
-                  </p>
+                  <h3 style={{ fontWeight: 800, fontSize: '1.2rem', color: 'var(--text-1)' }}>문의가 접수되었습니다</h3>
+                  <p style={{ color: 'var(--text-2)', fontSize: '0.9rem', lineHeight: 1.7 }}>빠른 시일 내에 연락드리겠습니다.<br />감사합니다.</p>
                   <button
                     onClick={() => { setSubmitted(false); setForm({ name: '', phone: '', email: '', category: '', message: '' }) }}
-                    className="mt-6 px-5 py-2 border border-[#e2e8f0] rounded-lg text-sm text-[#64748b] hover:bg-[#f8fafc] transition-colors"
+                    className="btn-outline"
+                    style={{ marginTop: 8, padding: '10px 24px', fontSize: '0.88rem' }}
                   >
                     새 문의 작성
                   </button>
                 </div>
               ) : (
                 <>
-                  <h2 className="text-xl font-bold text-[#0D1B2A] mb-6">문의 양식</h2>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-sm font-medium text-[#374151] mb-1.5">
-                          성함 <span className="text-[#991b1b]">*</span>
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          value={form.name}
-                          onChange={(e) => setForm({ ...form, name: e.target.value })}
-                          placeholder="홍길동"
-                          className="w-full px-3 py-2.5 border border-[#e2e8f0] rounded-lg text-sm focus:outline-none focus:border-[#2452c4] focus:ring-1 focus:ring-[#2452c4]/30 transition-colors"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-[#374151] mb-1.5">
-                          연락처 <span className="text-[#991b1b]">*</span>
-                        </label>
-                        <input
-                          type="tel"
-                          required
-                          value={form.phone}
-                          onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                          placeholder="010-0000-0000"
-                          className="w-full px-3 py-2.5 border border-[#e2e8f0] rounded-lg text-sm focus:outline-none focus:border-[#2452c4] focus:ring-1 focus:ring-[#2452c4]/30 transition-colors"
-                        />
-                      </div>
+                  <h2 style={{ fontWeight: 800, fontSize: '1.15rem', color: 'var(--text-1)', marginBottom: 24 }}>문의 양식</h2>
+                  <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
+                      {[
+                        { label: '성함', name: 'name', type: 'text', placeholder: '홍길동', required: true },
+                        { label: '연락처', name: 'phone', type: 'tel', placeholder: '010-0000-0000', required: true },
+                      ].map(f => (
+                        <div key={f.name}>
+                          <label style={{ display: 'block', fontSize: '0.84rem', fontWeight: 600, color: 'var(--text-2)', marginBottom: 7 }}>
+                            {f.label} {f.required && <span style={{ color: 'var(--brand-fire)' }}>*</span>}
+                          </label>
+                          <input
+                            type={f.type} required={f.required} placeholder={f.placeholder}
+                            value={form[f.name]}
+                            onChange={e => setForm({ ...form, [f.name]: e.target.value })}
+                            className="t-input"
+                          />
+                        </div>
+                      ))}
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-[#374151] mb-1.5">이메일</label>
-                      <input
-                        type="email"
-                        value={form.email}
-                        onChange={(e) => setForm({ ...form, email: e.target.value })}
-                        placeholder="example@email.com"
-                        className="w-full px-3 py-2.5 border border-[#e2e8f0] rounded-lg text-sm focus:outline-none focus:border-[#2452c4] focus:ring-1 focus:ring-[#2452c4]/30 transition-colors"
-                      />
+                      <label style={{ display: 'block', fontSize: '0.84rem', fontWeight: 600, color: 'var(--text-2)', marginBottom: 7 }}>이메일</label>
+                      <input type="email" placeholder="example@email.com" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} className="t-input" />
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-[#374151] mb-1.5">
-                        문의 유형 <span className="text-[#991b1b]">*</span>
+                      <label style={{ display: 'block', fontSize: '0.84rem', fontWeight: 600, color: 'var(--text-2)', marginBottom: 7 }}>
+                        문의 유형 <span style={{ color: 'var(--brand-fire)' }}>*</span>
                       </label>
                       <select
-                        required
-                        value={form.category}
-                        onChange={(e) => setForm({ ...form, category: e.target.value })}
-                        className="w-full px-3 py-2.5 border border-[#e2e8f0] rounded-lg text-sm focus:outline-none focus:border-[#2452c4] focus:ring-1 focus:ring-[#2452c4]/30 transition-colors bg-white"
+                        required value={form.category} onChange={e => setForm({ ...form, category: e.target.value })}
+                        className="t-input" style={{ cursor: 'pointer' }}
                       >
                         <option value="">선택해주세요</option>
                         <option value="design">소방설비 설계</option>
@@ -147,24 +154,18 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-[#374151] mb-1.5">
-                        문의 내용 <span className="text-[#991b1b]">*</span>
+                      <label style={{ display: 'block', fontSize: '0.84rem', fontWeight: 600, color: 'var(--text-2)', marginBottom: 7 }}>
+                        문의 내용 <span style={{ color: 'var(--brand-fire)' }}>*</span>
                       </label>
                       <textarea
-                        required
-                        rows={5}
-                        value={form.message}
-                        onChange={(e) => setForm({ ...form, message: e.target.value })}
+                        required rows={5} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })}
                         placeholder="문의하실 내용을 자세히 적어주세요. (건물 용도, 규모, 위치 등 알려주시면 더 정확한 안내가 가능합니다)"
-                        className="w-full px-3 py-2.5 border border-[#e2e8f0] rounded-lg text-sm focus:outline-none focus:border-[#2452c4] focus:ring-1 focus:ring-[#2452c4]/30 transition-colors resize-none"
+                        className="t-input" style={{ resize: 'vertical', minHeight: 120 }}
                       />
                     </div>
 
-                    <button
-                      type="submit"
-                      className="w-full py-3 bg-[#1a3a8f] hover:bg-[#2452c4] text-white font-semibold rounded-lg transition-colors flex items-center justify-center gap-2"
-                    >
-                      <Send size={16} />
+                    <button type="submit" className="btn-fire" style={{ width: '100%', justifyContent: 'center', marginTop: 4 }}>
+                      <span className="material-symbols-outlined" style={{ fontSize: 16 }}>send</span>
                       문의 보내기
                     </button>
                   </form>
